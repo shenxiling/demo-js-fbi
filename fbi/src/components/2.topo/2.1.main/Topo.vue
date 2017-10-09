@@ -15,12 +15,9 @@
 </template>
 
 <script>
-  import MarvelTab from "@/walle/widget/tab/MarvelTab";
-  import MarvelTabItem from "@/walle/widget/tab/MarvelTabItem";
+  import {MarvelTab, MarvelTabItem, MarvelTxtButton, MarvelWizardTab} from "marvel-fui2";
   import Phy from "@/components/2.topo/2.2.phy/Phy";
   import Traffic from "@/components/2.topo/2.3.traffic/Traffic";
-  import MarvelTxtButton from "@/walle/widget/button/MarvelTxtButton";
-  import MarvelWizardTab from "@/walle/widget/wizard/MarvelWizardTab";
 
   export default {
     components: {
@@ -53,13 +50,13 @@
         //#endregion
       }
     },
-    mounted: function(){
+    mounted: function () {
 
     },
     methods: {
       //#region inner
       onClickWizardTab: function (oItem) {
-        if(oItem.index == 1){
+        if (oItem.index == 1) {
           this.moduleName = "Phy";
         }
         else {
@@ -79,8 +76,8 @@
 
 <style scoped>
 
-  .topoWrapper{
-    height:100%;
+  .topoWrapper {
+    height: 100%;
   }
 
   .customTabWrapper {
@@ -94,8 +91,9 @@
     padding: 10px;
     box-sizing: border-box;
   }
-  .topoAreaCont{
+
+  .topoAreaCont {
     height: 100%;
-    box-shadow: 1px 2px 6px rgba(0,0,0,0.25);
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.25);
   }
 </style>

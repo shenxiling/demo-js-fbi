@@ -25,8 +25,8 @@
 
 <script>
   import TopoPanel from "@/components/0.common/0.2.topo/TopoPanel";
-  import MarvelBottomExtPanel from "@/walle/widget/extPanel/MarvelBottomExtPanel";
   import NodeInsertS3TopoBottom from "@/components/0.common/0.5.nodeInsertS3Topo/NodeInsertS3TopoBottom";
+  import {MarvelBottomExtPanel} from "marvel-fui2";
 
   export default {
     components: {

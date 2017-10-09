@@ -11,8 +11,7 @@
 </template>
 
 <script>
-  import MarvelFrame from "@/walle/widget/frame/MarvelFrame";
-  import MarvelIconTxtButton from "@/walle/widget/button/MarvelIconTxtButton";
+  import {MarvelFrame, MarvelIconTxtButton} from "marvel-fui2";
   export default {
     components: {
       MarvelIconTxtButton,

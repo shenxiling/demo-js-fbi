@@ -72,13 +72,7 @@
 </template>
 
 <script>
-  import MarvelDialog from "@/walle/widget/dialog/MarvelDialog.vue";
-  import MarvelPrimaryButton from "@/walle/widget/button/MarvelPrimaryButton";
-  import MarvelGrid from "@/walle/widget/grid/MarvelGrid.vue";
-  import MarvelInput from "@/walle/widget/input/MarvelInput";
-  import MarvelMultiInput from "@/walle/widget/input/MarvelMultiInput";
-  import MarvelDropDownButton from "@/walle/widget/button/MarvelDropDownButton";
-  import MarvelIconTxtButton from "@/walle/widget/button/MarvelIconTxtButton";
+  import {MarvelDialog, MarvelPrimaryButton, MarvelGrid, MarvelInput, MarvelMultiInput, MarvelDropDownButton, MarvelIconTxtButton} from "marvel-fui2";
 
   export default {
     components: {

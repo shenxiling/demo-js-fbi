@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import MarvelTopo from '@/walle/widget/topo/MarvelTopo';
+  import {MarvelTopo} from 'marvel-fui2';
 
   export default {
     components: {

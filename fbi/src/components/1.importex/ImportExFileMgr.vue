@@ -65,13 +65,7 @@
 </template>
 
 <script>
-  import MarvelFrame from "@/walle/widget/frame/MarvelFrame";
-  import MarvelGrid from "@/walle/widget/grid/MarvelGrid";
-  import MarvelIconTxtButton from "@/walle/widget/button/MarvelIconTxtButton";
-  import MarvelDialog from "@/walle/widget/dialog/MarvelDialog";
-  import MarvelLoadingMini from "@/walle/widget/loading/MarvelLoadingMini";
-  import MarvelUpload from "@/walle/widget/upload/MarvelUpload";
-  import MarvelMultiInput from "@/walle/widget/input/MarvelMultiInput";
+  import {MarvelFrame, MarvelGrid, MarvelIconTxtButton, MarvelDialog, MarvelLoadingMini, MarvelUpload, MarvelMultiInput} from "marvel-fui2";
   export default {
     components: {
       MarvelMultiInput,
@@ -123,7 +117,7 @@
         //#endregion
         //#region upload dialog
         showDialog: false,
-        showOverride:false,
+        showOverride: false,
         file: undefined,
         status4Remark: "",
         inputMsg4Remark: "",
@@ -164,7 +158,7 @@
       _updateLoadingBar4UploadStart: function (oCallback) {
         var self = this;
 
-        if(this.debug){
+        if (this.debug) {
           self.$refs.refMiniLoading.showEx("取消");
           self.$refs.refMiniLoading.setProgress(10, "上传ing");
           setTimeout(function () {
@@ -179,14 +173,14 @@
             }, 1000);
           }, 1000);
         }
-        else{
+        else {
           //TODO:
         }
       },
       _getFileList: function () {
         this.rows4FileMgr = [];
 
-        if(this.debug){
+        if (this.debug) {
           for (var i = 1; i < 10; i++) {
             var oRowDefault = [{
               value: i,
@@ -223,7 +217,7 @@
             this.rows4FileMgr.push(oRowDefault);
           }
         }
-        else{
+        else {
           //TODO:
         }
       },
@@ -241,10 +235,10 @@
       },
       onGridRowIconClick: function (oRow, oCell) {
         if (this.debug) {
-          if(oCell.value =="icon-bin"){
+          if (oCell.value == "icon-bin") {
             alert("icon-bin");
           }
-          else{
+          else {
             alert("icon-download");
           }
         }
@@ -252,9 +246,9 @@
           //TODO:
         }
       },
-      onSelectFileBtnClick:function(oFile){
-        for(var i=0;i<this.rows4FileMgr.length;i++){
-          if(oFile.name == this.rows4FileMgr[i][1].value){
+      onSelectFileBtnClick: function (oFile) {
+        for (var i = 0; i < this.rows4FileMgr.length; i++) {
+          if (oFile.name == this.rows4FileMgr[i][1].value) {
             this.showOverride = true;
             break;
           }

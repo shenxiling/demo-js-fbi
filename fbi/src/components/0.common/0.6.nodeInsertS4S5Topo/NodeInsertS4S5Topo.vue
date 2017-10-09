@@ -61,10 +61,8 @@
 </template>
 
 <script>
-  import MarvelTab from "@/walle/widget/tab/MarvelTab";
-  import MarvelTabItem from "@/walle/widget/tab/MarvelTabItem";
+  import {MarvelTab, MarvelTabItem, MarvelBottomExtPanel} from "marvel-fui2";
   import TopoPanel from "@/components/0.common/0.2.topo/TopoPanel";
-  import MarvelBottomExtPanel from "@/walle/widget/extPanel/MarvelBottomExtPanel";
   import NodeInsertS4S5Inserted from "@/components/0.common/0.6.nodeInsertS4S5Topo/NodeInsertS4S5Inserted";
   import NodeInsertS4S5NotInserted from "@/components/0.common/0.6.nodeInsertS4S5Topo/NodeInsertS4S5NotInserted";
   export default {
@@ -115,54 +113,54 @@
       //#endregion
       //#region callback
       //#region not insert
-      onClickRow4NotInsertTraffic: function(oRow){
+      onClickRow4NotInsertTraffic: function (oRow) {
         this.$emit("onClickRow4NotInsertTraffic", oRow);
       },
-      onClick4ExportNotInsertTraffic: function(){
+      onClick4ExportNotInsertTraffic: function () {
         this.$emit("onClick4ExportNotInsertTraffic");
       },
-      onClick4OperationLogNotInsert: function(){
+      onClick4OperationLogNotInsert: function () {
         this.$emit("onClick4OperationLogNotInsert");
       },
-      onClick4SearchNotInsertTraffic: function(){
+      onClick4SearchNotInsertTraffic: function () {
         this.$emit("onClick4SearchNotInsertTraffic");
       },
-      onClick4InsertTraffic: function(arrRow,bScriptCheckStatus){
-        this.$emit("onClick4InsertTraffic",arrRow,bScriptCheckStatus);
+      onClick4InsertTraffic: function (arrRow, bScriptCheckStatus) {
+        this.$emit("onClick4InsertTraffic", arrRow, bScriptCheckStatus);
       },
-      onClick4ExportRelativePort: function(){
+      onClick4ExportRelativePort: function () {
         this.$emit("onClick4ExportRelativePort");
       },
-      onClick4ImportRelativePort: function(){
+      onClick4ImportRelativePort: function () {
         this.$emit("onClick4ImportRelativePort");
       },
-      onCheckRow4NotInsert:function(oRow){
-        this.$emit("onCheckRow4NotInsert",oRow);
+      onCheckRow4NotInsert: function (oRow) {
+        this.$emit("onCheckRow4NotInsert", oRow);
       },
-      onUnCheckRow4NotInsert:function(oRow){
-        this.$emit("onUnCheckRow4NotInsert",oRow);
+      onUnCheckRow4NotInsert: function (oRow) {
+        this.$emit("onUnCheckRow4NotInsert", oRow);
       },
       //#endregion
       //#region insert
-      onClickRow4InsertTraffic: function(oRow){
-        this.$emit("onClickRow4InsertTraffic",oRow);
+      onClickRow4InsertTraffic: function (oRow) {
+        this.$emit("onClickRow4InsertTraffic", oRow);
       },
-      onClick4Recovery:function(arrRow){
-        this.$emit("onClick4Recovery",arrRow);
+      onClick4Recovery: function (arrRow) {
+        this.$emit("onClick4Recovery", arrRow);
       },
-      onClick4RecoveryAll:function(){
+      onClick4RecoveryAll: function () {
         this.$emit("onClick4RecoveryAll");
       },
-      onClick4ExportScript:function(){
+      onClick4ExportScript: function () {
         this.$emit("onClick4ExportScript");
       },
-      onClick4ExportInsertTraffic:function(){
+      onClick4ExportInsertTraffic: function () {
         this.$emit("onClick4ExportInsertTraffic");
       },
-      onClick4OperationLogInsert:function(){
+      onClick4OperationLogInsert: function () {
         this.$emit("onClick4OperationLogInsert");
       },
-      onClick4SearchInsertTraffic:function(){
+      onClick4SearchInsertTraffic: function () {
         this.$emit("onClick4SearchInsertTraffic");
       },
       //#endregion
@@ -196,10 +194,10 @@
       setData4NotInsertTrafficRouter: function (rows4Route) {
         this.$refs.ref4S4S5NotInserted.setData4NotInsertTrafficRouter(rows4Route);
       },
-      setData4RelativePort:function(rows4RelativeTraffic){
+      setData4RelativePort: function (rows4RelativeTraffic) {
         this.$refs.ref4S4S5NotInserted.setData4RelativePort(rows4RelativeTraffic);
       },
-      getCheckRow4NotInsert:function(){
+      getCheckRow4NotInsert: function () {
         return this.$refs.ref4S4S5NotInserted.getCheckRow4NotInsert();
       },
       //#endregion

@@ -56,11 +56,8 @@
 </template>
 
 <script>
-  import MarvelRouter from "@/walle/component/router";
-  import MarvelPrimaryButton from "@/walle/widget/button/MarvelPrimaryButton";
-  import MarvelGrid from "@/walle/widget/grid/MarvelGrid.vue";
-  import MarvelFrame from '@/walle/widget/frame/MarvelFrame';
-  import MarvelIconTxtButton from "@/walle/widget/button/MarvelIconTxtButton";
+  import MarvelRouter from "marvel-fui2/src/walle/component/router";
+  import {MarvelPrimaryButton, MarvelGrid, MarvelFrame, MarvelIconTxtButton} from "marvel-fui2";
 
   export default {
     components: {

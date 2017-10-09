@@ -21,8 +21,7 @@
 </template>
 
 <script>
-  import MarvelGrid from "@/walle/widget/grid/MarvelGrid";
-  import MarvelIconTxtButton from "@/walle/widget/button/MarvelIconTxtButton";
+  import {MarvelGrid, MarvelIconTxtButton} from "marvel-fui2";
   export default {
     components: {
       MarvelGrid,

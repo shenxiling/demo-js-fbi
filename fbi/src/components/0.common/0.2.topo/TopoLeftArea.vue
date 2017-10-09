@@ -14,9 +14,7 @@
 </template>
 
 <script>
-  import MarvelLeftExtPanel from "@/walle/widget/extPanel/MarvelLeftExtPanel";
-  import MarvelZTree from "@/walle/widget/tree/MarvelZTree";
-  import MarvelZTreeItem from "@/walle/widget/tree/MarvelZTreeItem";
+  import {MarvelLeftExtPanel, MarvelZTree, MarvelZTreeItem} from "marvel-fui2";
   export default {
     components: {
       MarvelZTreeItem,

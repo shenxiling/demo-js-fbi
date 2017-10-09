@@ -28,9 +28,8 @@
 
 <script>
   import TopoPanel from "@/components/0.common/0.2.topo/TopoPanel";
-  import MarvelBottomExtPanel from "@/walle/widget/extPanel/MarvelBottomExtPanel";
   import TrafficBottom from "@/components/0.common/0.4.trafficTopo/TrafficBottom";
-
+  import {MarvelBottomExtPanel} from "marvel-fui2";
   export default {
     components: {
       MarvelBottomExtPanel,

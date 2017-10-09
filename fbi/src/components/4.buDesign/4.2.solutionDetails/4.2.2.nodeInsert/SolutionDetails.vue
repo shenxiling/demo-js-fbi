@@ -32,11 +32,8 @@
 </template>
 
 <script>
-  import MarvelRouter from "@/walle/component/router";
-  import MarvelTab from "@/walle/widget/tab/MarvelTab";
-  import MarvelTabItem from "@/walle/widget/tab/MarvelTabItem";
-  import MarvelTxtButton from "@/walle/widget/button/MarvelTxtButton";
-  import MarvelWizardTab from "@/walle/widget/wizard/MarvelWizardTab";
+  import MarvelRouter from "marvel-fui2/src/walle/component/router";
+  import {MarvelTab, MarvelTabItem, MarvelTxtButton, MarvelWizardTab, MarvelIconTxtButton} from "marvel-fui2";
   import NodeInsertS1 from "@/components/4.buDesign/4.2.solutionDetails/4.2.2.nodeInsert/NodeInsertS1";
   import NodeInsertS2 from "@/components/4.buDesign/4.2.solutionDetails/4.2.2.nodeInsert/NodeInsertS2";
   import NodeInsertS2Res from "@/components/4.buDesign/4.2.solutionDetails/4.2.2.nodeInsert/NodeInsertS2Res";
@@ -44,7 +41,6 @@
   import NodeInsertS4 from "@/components/4.buDesign/4.2.solutionDetails/4.2.2.nodeInsert/NodeInsertS4";
   import NodeInsertS5 from "@/components/4.buDesign/4.2.solutionDetails/4.2.2.nodeInsert/NodeInsertS5";
   import NetWorkSynTrafficRes from "@/components/4.buDesign/4.2.solutionDetails/4.2.2.nodeInsert/NetWorkSynTrafficRes";
-  import MarvelIconTxtButton from "@/walle/widget/button/MarvelIconTxtButton";
 
   export default {
     components: {
@@ -73,27 +69,27 @@
           index: 1,
           label: "新建华为网络",
           isActive: true,
-          isWarn:false,
+          isWarn: false,
         }, {
           index: 2,
           label: "环插设备",
           isActive: false,
-          isWarn:false,
+          isWarn: false,
         }, {
           index: 3,
           label: "确认不可割接业务",
           isActive: false,
-          isWarn:false,
+          isWarn: false,
         }, {
           index: 4,
           label: "割接穿通业务",
           isActive: false,
-          isWarn:false,
+          isWarn: false,
         }, {
           index: 5,
           label: "割接落地业务",
           isActive: false,
-          isWarn:false,
+          isWarn: false,
         }],
         //#endregion
         //#region params
@@ -111,32 +107,32 @@
     methods: {
       //#region inner
       onClickWizardTab: function (oItem) {
-        if(oItem.index == 1){
+        if (oItem.index == 1) {
           this.moduleName = "NodeInsertS1";
         }
-        else if(oItem.index == 2){
+        else if (oItem.index == 2) {
           this.moduleName = "NodeInsertS2";
         }
-        else if(oItem.index == 3){
+        else if (oItem.index == 3) {
           this.moduleName = "NodeInsertS3";
         }
-        else if(oItem.index == 4){
+        else if (oItem.index == 4) {
           this.moduleName = "NodeInsertS4";
         }
         else {
           this.moduleName = "NodeInsertS5";
         }
       },
-      onClickNetWorkSynBtn:function(){
-          if(this.debug){
-            //alert("onClickNetWorkSynBtn");
-            this.$refs.ref4SoulutionWizardTab.setItemWarnOrNot([2,4,5],true);
-          }
-          else{
-              //TODO:
-          }
+      onClickNetWorkSynBtn: function () {
+        if (this.debug) {
+          //alert("onClickNetWorkSynBtn");
+          this.$refs.ref4SoulutionWizardTab.setItemWarnOrNot([2, 4, 5], true);
+        }
+        else {
+          //TODO:
+        }
       },
-      onClickNetWorkSynRes:function(){
+      onClickNetWorkSynRes: function () {
         this.moduleName = "NetWorkSynTrafficRes";
       }
       //#endregion
@@ -151,36 +147,42 @@
 </script>
 
 <style scoped>
-  .main{
+  .main {
     height: 100%;
   }
+
   .customTabWrapper {
     height: 52px;
     box-sizing: border-box;
     padding: 0px 10px;
   }
-  .tabArea{
+
+  .tabArea {
     float: left;
-    height:100%;
+    height: 100%;
     padding-top: 15px;
     box-sizing: border-box;
   }
-  .btnArea{
+
+  .btnArea {
     float: right;
-    height:100%;
+    height: 100%;
     padding-top: 10px;
     box-sizing: border-box;
   }
-  .classCustom{
+
+  .classCustom {
     margin-right: 20px;
   }
+
   .topoArea {
     height: calc(100% - 52px);
     padding: 0px 10px 10px 10px;
     box-sizing: border-box;
   }
-  .topoAreaCont{
+
+  .topoAreaCont {
     height: 100%;
-    box-shadow: 1px 2px 6px rgba(0,0,0,0.25);
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.25);
   }
 </style>

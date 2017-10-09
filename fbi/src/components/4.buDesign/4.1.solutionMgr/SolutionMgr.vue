@@ -34,8 +34,7 @@
 </template>
 
 <script>
-  import MarvelAccordion3 from "@/walle/widget/accordion/MarvelAccordion3";
-  import MarvelIconTxtButton from "@/walle/widget/button/MarvelIconTxtButton";
+  import {MarvelAccordion3, MarvelIconTxtButton} from "marvel-fui2";
   import CreateSolution from "@/components/4.buDesign/4.1.solutionMgr/CreateSolution.vue";
   import SolutionSummary from "@/components/4.buDesign/4.1.solutionMgr/SolutionSummary.vue";
 

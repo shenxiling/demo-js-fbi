@@ -62,10 +62,7 @@
 
 <script>
   import TopoPanel from "@/components/0.common/0.2.topo/TopoPanel";
-  import MarvelBottomExtPanel from "@/walle/widget/extPanel/MarvelBottomExtPanel";
-  import MarvelDialog from "@/walle/widget/dialog/MarvelDialog";
-  import MarvelIconTxtButton from "@/walle/widget/button/MarvelIconTxtButton";
-  import MarvelGrid from "@/walle/widget/grid/MarvelGrid";
+  import {MarvelBottomExtPanel, MarvelDialog, MarvelIconTxtButton, MarvelGrid} from "marvel-fui2";
   export default {
     components: {
       MarvelGrid,
@@ -255,7 +252,7 @@
           uiNode: true
         };
         arrNode.push(oNode2);
-        var oNode3= {
+        var oNode3 = {
           id: "nodeBase1",
           x: Math.random() * 800,
           y: Math.random() * 300,
@@ -303,91 +300,91 @@
           this.rows4Fiber = [[{
             value: 1,
             type: "text"
-          },{
+          }, {
             value: "nodeBase0",
             type: "text"
-          },{
+          }, {
             value: "STM1",
             type: "text"
-          },{
+          }, {
             value: "是",
             type: "text"
-          },{
+          }, {
             value: "扩展网元",
             type: "text"
-          },{
+          }, {
             value: "nodeBase0-10-1",
             type: "text"
-          },{
+          }, {
             value: "电端口",
             type: "text"
-          },{
+          }, {
             value: "0",
             type: "text"
-          },{
+          }, {
             value: "0",
             type: "text"
-          },{
+          }, {
             value: "工作",
             type: "text"
-          },{
+          }, {
             value: "nodeBase1-1-2",
             type: "text"
-          },{
+          }, {
             value: "电端口",
             type: "text"
-          },{
+          }, {
             value: "0",
             type: "text"
-          },{
+          }, {
             value: "0",
             type: "text"
-          },{
+          }, {
             value: "工作",
             type: "text"
-          }],[{
+          }], [{
             value: 2,
             type: "text"
-          },{
+          }, {
             value: "nodeBase0",
             type: "text"
-          },{
+          }, {
             value: "STM1",
             type: "text"
-          },{
+          }, {
             value: "是",
             type: "text"
-          },{
+          }, {
             value: "扩展网元",
             type: "text"
-          },{
+          }, {
             value: "nodeBase0-10-1",
             type: "text"
-          },{
+          }, {
             value: "电端口",
             type: "text"
-          },{
+          }, {
             value: "0",
             type: "text"
-          },{
+          }, {
             value: "0",
             type: "text"
-          },{
+          }, {
             value: "工作",
             type: "text"
-          },{
+          }, {
             value: "VNE1-1-2",
             type: "text"
-          },{
+          }, {
             value: "电端口",
             type: "text"
-          },{
+          }, {
             value: "0",
             type: "text"
-          },{
+          }, {
             value: "0",
             type: "text"
-          },{
+          }, {
             value: "工作",
             type: "text"
           }]];
@@ -399,16 +396,16 @@
       onClickSelectNodeCancel: function () {
         this.showDialog = false;
       },
-      onClickInsertOk:function(){
-        if(this.debug){
+      onClickInsertOk: function () {
+        if (this.debug) {
           alert(111);
         }
-        else{
+        else {
           //TODO:
         }
       },
-      onClickInsertViewResult:function(){
-        this.$parent.moduleName="NodeInsertS2Res";
+      onClickInsertViewResult: function () {
+        this.$parent.moduleName = "NodeInsertS2Res";
       },
       //#endregion
 
@@ -431,27 +428,27 @@
     background-color: #272743;
   }
 
-  .gridArea{
-    height:100%;
+  .gridArea {
+    height: 100%;
   }
 
-  .top{
+  .top {
     height: calc(100% - 42px);
   }
 
-  .down{
-    height:42px;
+  .down {
+    height: 42px;
   }
 
-  .gridFootBtn{
-    height:100%;
+  .gridFootBtn {
+    height: 100%;
     padding-top: 10px;
     box-sizing: border-box;
     float: right;
   }
 
-  .dialogContArea{
+  .dialogContArea {
     width: 100%;
-    height:100%;
+    height: 100%;
   }
 </style>

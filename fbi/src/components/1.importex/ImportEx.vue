@@ -11,8 +11,7 @@
 </template>
 
 <script>
-  import MarvelFrame from "@/walle/widget/frame/MarvelFrame";
-  import MarvelWizard from "@/walle/widget/wizard/MarvelWizard";
+  import {MarvelFrame, MarvelWizard} from "marvel-fui2";
   import ImportExFileMgr from "@/components/1.importex/ImportExFileMgr";
   import ImportExParseFixInput from "@/components/1.importex/ImportExParseFixInput";
   import ImportExParseInput from "@/components/1.importex/ImportExParseInput";
