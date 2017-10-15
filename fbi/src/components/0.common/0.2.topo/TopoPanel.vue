@@ -4,6 +4,23 @@
       <topo-toolbar v-bind:toolbarItems="toolbarItems"
                     v-on:onToolbarItemClick="onToolbarItemClick"></topo-toolbar>
     </div>
+    <marvel-dialog theme="dark" :showDialog="showDialog4CreateFiber"
+                   title="创建光纤" width="500" height="300"
+                   v-on:onClickDialogClose="onClickDialog4CreateFiberClose">
+      <div slot="dialogCont">
+        <marvel-search-with-drop-down placeholder="请输入关键字..." @search="search4SrcNe"
+                                  :selectItems="selectItems4CreateFiber"></marvel-search-with-drop-down>
+        <marvel-grid :titles="titles4CreateFiber" :rows="rows4CreateFiber"></marvel-grid>
+        <div>
+          <div>端口</div>
+          <div v-for="portItem in portItems">
+            <marvel-radio-box ref=portItem.ref id=portItem.id group="group4Src"
+                              label=portItem.label showLabel="true"></marvel-radio-box>
+          </div>
+        </div>
+      </div>
+      <div slot="dialogFoot"></div>
+    </marvel-dialog>
     <div class="topoPanelContent">
       <topo-center-area ref="ref4TopoCenterArea"
                         v-bind:theme="theme"
@@ -22,9 +39,14 @@
   import TopoLeftArea from "@/components/0.common/0.2.topo/TopoLeftArea";
   import TopoCenterArea from "@/components/0.common/0.2.topo/TopoCenterArea";
   import TopoRightArea from "@/components/0.common/0.2.topo/TopoRightArea";
+  import {MarvelDialog,MarvelSearchWithDropDown,MarvelGrid,MarvelRadioBox} from "marvel-fui2";
 
   export default {
     components: {
+      MarvelRadioBox,
+      MarvelGrid,
+      MarvelSearchWithDropDown,
+      MarvelDialog,
       TopoRightArea,
       TopoCenterArea,
       TopoLeftArea,
@@ -33,11 +55,46 @@
     name: "TopoPanel",
     props: ["theme", "toolbarItems", "id4Topo", "showLeftArea", "showRightArea"],
     data: function () {
-      return {}
+      return {
+        //#region createFiber
+        showDialog4CreateFiber: false,
+        titles4CreateFiber: [{
+          label: "",
+          width: "5%"
+        }, {
+          label: "子网名称",
+          width: "25%"
+        }, {
+          label: "网元名称",
+          width: "25%"
+        }, {
+          label: "单板信息",
+          width: "45%"
+        }],
+        rows4CreateFiber: [],
+        selectItems4CreateFiber:[{
+          label: "子网名称",
+          selected: true
+        },{
+          label: "网元名称",
+          selected: false
+        },{
+          label: "单板信息",
+          selected: false
+        }],
+        portItems:[],
+        //#endregion
+      }
     },
     methods: {
       //#region inner
-
+      onClickDialog4CreateFiberClose: function(){
+          this.showDialog4CreateFiber=false;
+      },
+      search4SrcNe: function(searchKey, strSearchVal){
+          console.log(searchKey);
+          console.log(strSearchVal);
+      },
       //#endregion
       //#region callback
       onTreeNodeClick: function (oTreeNode) {
@@ -72,6 +129,12 @@
         this.$refs.ref4TopoCenterArea.updateTopo(oTopoData);
 //        console.log("updateTopo");
       },
+      setShowDialog4CreateFiber: function (isShow){
+          this.showDialog4CreateFiber=isShow;
+      },
+      setGrid4CreateFiber: function(oRows4CreateFiber) {
+          this.rows4CreateFiber=oRows4CreateFiber;
+      }
       //#endregion
     },
     computed: {

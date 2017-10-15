@@ -102,6 +102,8 @@
       this._getData4PhyGridPanelSubnet();
       //3.6._getData4PhyGridPanelSite
       this._getData4PhyGridPanelSite();
+      //4.1._getData4PhyToolBarCreatFiber
+      this._getData4PhyToolBarCreatFiber();
     },
     methods: {
       //#region inner
@@ -110,6 +112,12 @@
       },
       onToolbarItemClick: function (oToolbarItem) {
         console.log(oToolbarItem);
+        if(oToolbarItem.id==0){
+
+        }else if(oToolbarItem.id==12)
+        {
+            this.$refs.ref4MainTopo4Phy.setShowDialog4CreateFiber(true);
+        }
       },
       onClickRow4Ne: function (oRow) {
         this._getDevPropsByDevId(oRow[1].value);
@@ -977,6 +985,30 @@
 
         this.$refs.ref4MainTopo4Phy.setData4PhyGridPanelSite(oRows4Site);
       },
+      _getData4PhyToolBarCreatFiber: function(){
+        var oRows4CreateFiber=[];
+        if(this.debug){
+          for (var i = 0; i < 2; i++) {
+              for(var j=0;j<3;j++){
+                var oRow = [{
+                  value: "子网1",
+                  type: "text"
+                }, {
+                  value: "网元" + i,
+                  type: "text"
+                }, {
+                  value: "单板" + j,
+                  type: "text"
+                }];
+                oRows4CreateFiber.push(oRow);
+              }
+          }
+        }
+        else{
+          //TODO:
+        }
+        this.$refs.ref4MainTopo4Phy.setGrid4CreateFiber(oRows4CreateFiber);
+      }
       //#endregion
       //#region callback
 

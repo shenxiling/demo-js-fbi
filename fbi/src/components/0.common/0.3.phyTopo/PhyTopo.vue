@@ -108,6 +108,12 @@
       setData4PhyGridPanelSite: function(oData4PhyGridPanelSite){
         this.$refs.ref4PhyGridPanel.setData4PhyGridPanelSite(oData4PhyGridPanelSite);
       },
+      setShowDialog4CreateFiber: function (isShow){
+        this.$refs.ref4MainTopo4Phy.setShowDialog4CreateFiber(isShow);
+      },
+      setGrid4CreateFiber: function (oRows4CreateFiber) {
+          this.$refs.ref4MainTopo4Phy.setGrid4CreateFiber(oRows4CreateFiber);
+      }
       //#endregion
     }
   }
